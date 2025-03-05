@@ -5,6 +5,7 @@
 const kmTaskElement = document.getElementById('task-km');
 const ageTaskElement = document.getElementById('task-age');
 const sendTaskElement = document.getElementById('send-task');
+const resultElement = document.getElementById('result');
 
 console.log(kmTaskElement);
 console.log(ageTaskElement);
@@ -45,6 +46,7 @@ sendTaskElement.addEventListener('click', function(event) {
     * */
     if (isNaN(quantityMiles) || isNaN(quantityAge) || quantityMiles <= 0 || quantityAge <= 0 || quantityAge > 120) {
         console.log("I dati inseriti non sono validi.");
+        alert("I dati inseriti non sono validi.");
         document.getElementById("result").innerHTML = "<p class='text-danger'>I dati inseriti non sono validi.</p>";
         return;
     }
@@ -79,13 +81,17 @@ sendTaskElement.addEventListener('click', function(event) {
     // Arrotonda il prezzo finale a due decimali
     costForTicket = costForTicket.toFixed(2);
     console.log("Prezzo finale formattato:", costForTicket);
-    
+
+    // Mostro il risultato sulla pagina
+    resultElement.textContent = `Il prezzo del biglietto è: €${costForTicket}`; // Mostra il prezzo
+    resultElement.classList.remove("text-danger"); // Rimuove la classe di errore (rosso)
+    resultElement.classList.add("text-success"); // Aggiunge la classe di successo (verde)
 });
 
 
-//     // Risultato
-//     alert(`Il prezzo totale del biglietto è: €${costForTicket}`);
-// }
+
+
+
 
 
 
