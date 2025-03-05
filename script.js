@@ -5,7 +5,9 @@
 const kmTaskElement = document.getElementById('task-km');
 const ageTaskElement = document.getElementById('task-age');
 const sendTaskElement = document.getElementById('send-task');
+const resetTaskElement = document.getElementById('reset-task');
 const resultElement = document.getElementById('result');
+
 
 console.log(kmTaskElement);
 console.log(ageTaskElement);
@@ -44,7 +46,7 @@ sendTaskElement.addEventListener('click', function(event) {
     *  isNaN verifica se il valore inserito non è un numero o è minore o uguale a 0;
     * document.getElementById("result").innerHTML modifica il contenuto della pagina HTML (l'elemento con id result) per mostrare un messaggio di errore visibile all'utente, informandolo che i dati non sono validi.
     * */
-    if (isNaN(quantityMiles) || isNaN(quantityAge) || quantityMiles <= 0 || quantityAge <= 0 || quantityAge > 120) {
+    if (isNaN(quantityMiles) || isNaN(quantityAge) || quantityMiles <= 0 ||  quantityMiles > 10000 || quantityAge <= 0 || quantityAge > 120) {
         console.log("I dati inseriti non sono validi.");
         document.getElementById("result").innerHTML = "<p class='text-danger'>I dati inseriti non sono validi.</p>";
         return;
@@ -87,6 +89,11 @@ sendTaskElement.addEventListener('click', function(event) {
     resultElement.classList.add("text-success"); // Aggiunge la classe di successo (verde)
 });
 
+// Aggiunge l'event listener per nascondere il risultato
+resetTaskElement.addEventListener('click', function() {
+    resultElement.textContent = ''; // Cancella il contenuto del risultato
+    resultElement.classList.remove("text-success", "text-danger"); // Rimuove eventuali classi di colore
+});
 
 
 
