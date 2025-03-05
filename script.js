@@ -49,8 +49,7 @@ sendTaskElement.addEventListener('click', function(event) {
         return;
     }
 
-
-    // Tariffa per KM
+    // Costo della tariffa base;
     const costForMiles = 0.21;
     let costForTicket = costForMiles * quantityMiles;
 
@@ -68,6 +67,19 @@ sendTaskElement.addEventListener('click', function(event) {
     } else {
         console.log("Nessuno sconto applicato.");
     }
+
+    // Calcola l'importo dello sconto in base alla percentuale di sconto applicata
+    let discountAmount = (costForTicket * discountPercentage) / 100;
+    console.log("Importo dello sconto:", discountAmount);
+
+    // Sottrae l'importo dello sconto dal costo totale del biglietto
+    costForTicket -= discountAmount;
+    console.log("Costo finale dopo sconto:", costForTicket);
+
+    // Arrotonda il prezzo finale a due decimali
+    costForTicket = costForTicket.toFixed(2);
+    console.log("Prezzo finale formattato:", costForTicket);
+    
 });
 
 
