@@ -1,4 +1,46 @@
 
+const kmTaskElement =  document.getElementById ('task-km');
+const ageTaskElement = document.getElementById ('task-age');
+const sendTaskElement = document.getElementById ('send-task');
+
+console.log( kmTaskElement);
+console.log(ageTaskElement);
+console.log(sendTaskElement);
+
+
+sendTaskElement.addEventListener('click', function() {
+    console.log('ho cliccato');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // Chiedo all'utente i chilometri da percorrere
 // const milesToGo = ('Inserisci i chilometri di distanza che ti separano dalla tua destinazione');
 // const userAge = ('Inserisci la tua Età');
