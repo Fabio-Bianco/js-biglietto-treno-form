@@ -1,4 +1,4 @@
-
+// variabili user-input
 const kmTaskElement =  document.getElementById ('task-km');
 const ageTaskElement = document.getElementById ('task-age');
 const sendTaskElement = document.getElementById ('send-task');
@@ -9,7 +9,9 @@ console.log(sendTaskElement);
 
 
 sendTaskElement.addEventListener('click', function() {
-    console.log('ho cliccato');
+   console.log('click');
+   console.log(kmTaskElement.value);
+   console.log(ageTaskElement.value);
 });
 
 
