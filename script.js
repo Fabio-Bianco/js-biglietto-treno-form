@@ -48,6 +48,26 @@ sendTaskElement.addEventListener('click', function(event) {
         document.getElementById("result").innerHTML = "<p class='text-danger'>I dati inseriti non sono validi.</p>";
         return;
     }
+
+
+    // Tariffa per KM
+    const costForMiles = 0.21;
+    let costForTicket = costForMiles * quantityMiles;
+
+    console.log("Costo senza sconto:", costForTicket);
+
+    // Sconto in base all'età
+    let discountPercentage = 0;
+
+    if (quantityAge < 18) {
+        discountPercentage = 20;
+        console.log("Sconto per minorenni: 20%");
+    } else if (quantityAge >= 65) {
+        discountPercentage = 40;
+        console.log("Sconto per over 65: 40%");
+    } else {
+        console.log("Nessuno sconto applicato.");
+    }
 });
 
 
