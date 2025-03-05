@@ -46,7 +46,6 @@ sendTaskElement.addEventListener('click', function(event) {
     * */
     if (isNaN(quantityMiles) || isNaN(quantityAge) || quantityMiles <= 0 || quantityAge <= 0 || quantityAge > 120) {
         console.log("I dati inseriti non sono validi.");
-        alert("I dati inseriti non sono validi.");
         document.getElementById("result").innerHTML = "<p class='text-danger'>I dati inseriti non sono validi.</p>";
         return;
     }
