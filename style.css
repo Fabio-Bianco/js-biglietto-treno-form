@@ -1,1 +1,68 @@
 
+
+
+/* Stile generale della pagina */
+body {
+    background-color: #a61942;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: #E8DDB5;
+    margin-bottom: 30px;
+    font-family:  Tahoma, sans-serif
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+
+
+/* Stile del form */
+.container {
+    gap: 10px;
+    background:#19647E;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Stile dei pulsanti */
+.btn-primary {
+    background-color: red;
+    border: none;
+    /* width: 100%; */
+}
+
+.btn-primary:hover {
+    background-color: darkred;
+}
+
+/* Stile del risultato */
+#result {
+    
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: white;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
