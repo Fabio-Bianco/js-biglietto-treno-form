@@ -83,13 +83,6 @@ sendTaskElement.addEventListener('click', function(event) {
 });
 
 
-
-//     let discountAmount = (costForTicket * discountPercentage) / 100;
-//     costForTicket -= discountAmount;
-
-//     // Formattazione del prezzo
-//     costForTicket = Number(costForTicket.toFixed(2));
-
 //     // Risultato
 //     alert(`Il prezzo totale del biglietto è: €${costForTicket}`);
 // }
