@@ -13,19 +13,15 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1 {
+h1 {    
     color: #E8DDB5;
     margin-bottom: 30px;
     font-family:  Tahoma, sans-serif
-    font-weight: bold;
-    margin-top: 20px;
+   
 }
 
-
-
-
 /* Stile del form */
-.container {
+.box {
     gap: 10px;
     background:#19647E;
     padding: 25px;
@@ -52,7 +48,7 @@ h1 {
 
 /* Stile del risultato */
 #result {
-    
+    display: none;
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 20px;
@@ -65,4 +61,8 @@ h1 {
 
 .text-success {
     color: #28a745 !important;
+}
+
+#ticketSection {
+    display: none;
 }

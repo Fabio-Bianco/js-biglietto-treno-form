@@ -16,27 +16,58 @@
 <body>
     <h1>Calcolo del prezzo del biglietto del treno</h1>
     <form action="./index.html">
-        <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-6">
-        <div class="form-group">
-            <label for="km">Quanti km devi percorrere?</label>
-            <input type="number" class="form-control" id="task-km" name="km-task" placeholder="Inserisci i km">
-        </div>
+        <div class="box container mt-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="km">Quanti km devi percorrere?</label>
+                        <input type="number" class="form-control" id="task-km" name="km-task" placeholder="Inserisci i km">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="age">Quanti anni hai?</label>
+                        <input type="number" class="form-control" id="task-age" name="age-task" placeholder="Inserisci la tua età">
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6">
-        <div class="form-group">
-            <label for="age">Quanti anni hai?</label>
-            <input type="number" class="form-control" id="task-age" name="age-task" placeholder="Inserisci la tua età">
-        </div>
+            <div class="d-flex justify-content-center mt-3">
+                <input class="btn btn-primary me-2" id="send-task" type="submit" value="Invia">
+                <input class="btn btn-secondary" id="reset-task" type="button" value="Annulla">
             </div>
-        </div classs="d-flex justify-content-center">
-        <input class="btn btn-primary" id="send-task" type="submit" value="Invia">
-        <input class="btn btn-secondary" id="reset-task" type="button" value="Annulla">
         </div>
 
     </form>
-<!-- Elemento per visualizzare il risultato -->
+
+    <!-- Elemento per visualizzare il risultato -->
+    
+    <div id="result" class=" box row mt-5">
+        <!-- <h2>Il prezzo del tuo biglietto è di: <span id="price"></span> €</h2> -->
+     
+    <div id=" ticket-section" class="box row mt-5" style="display: none;">
+        <h2>IL TUO BIGLIETTO</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome Passeggero</th>
+                    <th>Offerta</th>
+                    <th>Carrozza</th>
+                    <th>Codice CP</th>
+                    <th>Costo Biglietto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="passenger-name"></td>
+                    <td id="ticket-type">Biglietto Standard</td>
+                    <td id="carriage-number"></td>
+                    <td id="cp-code"></td>
+                    <td id="ticket-price"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
 
 
 
